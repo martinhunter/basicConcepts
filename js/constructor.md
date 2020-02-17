@@ -154,9 +154,12 @@ function multiply(mult) {
 }
 btn.click = multiply.bind(handlerobject)(paramsforhandlerobject)；
 ```
+
+### refrence link
+
 [this keyword](https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work)
 
-[Establishing an Execution Context](https://ecma-international.org/ecma-262/5.1/#sec-10.4）
+[Establishing an Execution Context](https://ecma-international.org/ecma-262/5.1/#sec-10.4)
 
 [undestanding scope](http://www.digital-web.com/articles/scope_in_javascript/)
 
