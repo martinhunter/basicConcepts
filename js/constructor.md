@@ -1,4 +1,6 @@
 ## new
+1. what new does
+
 ``` javascript
 function User(){
   // when using new to construct a new object,
@@ -70,6 +72,9 @@ var the_meaning = deep_thought.ask_question();
 ```
 
 * **Constructor** 
+#### 1. concept/purpose
+
+This technique is usually used to initialize public instance variables. The constructor's this variable is used to add members to the object.
 
 ``` javascript
 function BigComputer(answer) {
@@ -97,7 +102,7 @@ var i_wonder_what_this_is = test_this();
 
 * **Event Handler**
 
-    2.2.1 alerts the window object
+exp 1. alerts the window object
 
 ``` javascript
 <script type="text/javascript">
@@ -109,7 +114,8 @@ function click_handler() {
 <button id='thebutton' onclick='click_handler()'>Click me!</button> 
 ```
 
-    2.2.2 alerts the button DOM node
+exp 2. alerts the button DOM node
+
 ``` javascript
 <script type="text/javascript">
 function click_handler() {
@@ -161,12 +167,21 @@ function multiply(mult) {
 btn.click = multiply.bind(handlerobject)(paramsforhandlerobject)；
 ```
 
-### refrence link
+### 5. refrence link
 
-[this keyword](https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work)
+* [this keyword](https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work)
 
-[Establishing an Execution Context](https://ecma-international.org/ecma-262/5.1/#sec-10.4)
+* [Establishing an Execution Context](https://ecma-international.org/ecma-262/5.1/#sec-10.4)
 
-[undestanding scope](http://www.digital-web.com/articles/scope_in_javascript/)
+* [undestanding scope](http://www.digital-web.com/articles/scope_in_javascript/)
 
 ## prototype
+1. concept/purpose
+
+This technique is usually used to add public methods.When a member is sought and it isn't found in the object itself, then it is taken from the object's constructor's prototype member
+The prototype mechanism is used for inheritance.
+2. how it works
+
+
+### 5. refrence link
+* [private members](http://crockford.com/javascript/private.html)
