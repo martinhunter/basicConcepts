@@ -1,6 +1,8 @@
 ## new
 1. what new does
 
+When the code new Foo(...) is executed, the following things happen:
+
 ``` javascript
 function User(){
   // when using new to construct a new object,
@@ -27,6 +29,12 @@ Object { name: "Mar", op: op(), create: "bil" }
 >> a.create
 "bil"
 ```
+
+
+### 5. refrence link
+
+* [new operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+
 
 ## constructor
 
@@ -174,6 +182,7 @@ btn.click = multiply.bind(handlerobject)(paramsforhandlerobject)；
 * [Establishing an Execution Context](https://ecma-international.org/ecma-262/5.1/#sec-10.4)
 
 * [undestanding scope](http://www.digital-web.com/articles/scope_in_javascript/)
+* [protorype vs this](https://stackoverflow.com/questions/310870/use-of-prototype-vs-this-in-javascript)
 
 ## prototype
 1. concept/purpose
