@@ -1,5 +1,5 @@
 ## new
-```
+``` javascript
 function User(){
   // when using new to construct a new object,
   // it automatically runs the two commented codes below
@@ -13,7 +13,8 @@ function User(){
 var nuser = new User();
 // var cc = new nuser() return Error,nuser is not a constructor
 ```
-```
+
+``` javascript
 Example when it runs
 >> a
 Object { name: "Mar", op: op() }
@@ -64,7 +65,7 @@ var the_meaning = deep_thought.ask_question();
 
 * **Constructor** 
 
-```
+``` javascript
 function BigComputer(answer) {
   this.the_answer = answer;
   this.ask_question = function () {
@@ -77,7 +78,7 @@ var thisobj = this_thought.ask_question();
 
 ### 2.2 when *this* points to window
 
-```
+``` javascript
 function myFun() {
     return this; // What is `this` here?
 }
@@ -90,7 +91,7 @@ var obj = {
 
 * **Function Call**,not method of an object
 
-```
+``` javascript
 function test_this() {
   return this;
   }
@@ -101,7 +102,7 @@ var i_wonder_what_this_is = test_this();
 
     2.2.1 alerts the window object
 
-```
+``` javascript
 <script type="text/javascript">
 function click_handler() {
   alert(this); // alerts the window object
@@ -112,7 +113,7 @@ function click_handler() {
 ```
 
     2.2.2 alerts the button DOM node
-```
+``` javascript
 <script type="text/javascript">
 function click_handler() {
 alert(this); // alerts the button DOM node
@@ -132,8 +133,7 @@ window.onload = addhandler;
 step1. apply(),call(),but they'll execute immediately,not suitble for handler
 step2. craete bind property to prorotype of function
 
-```
-
+``` javascript
 Function.prototype.bind = function(obj) {
   var method = this,
   temp = function() {
@@ -148,6 +148,7 @@ function multiply(mult) {
 btn.click = multiply.bind(handlerobject)(paramsforhandlerobject)；
 ```
 
+[Establishing an Execution Context](https://ecma-international.org/ecma-262/5.1/#sec-10.4）
 [undestanding scope](http://www.digital-web.com/articles/scope_in_javascript/)
 
 ## prototype
