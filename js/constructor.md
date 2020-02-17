@@ -33,7 +33,7 @@ Object { name: "Mar", op: op(), create: "bil" }
 
 ### 2. the difference between scope and context
 
-* **context** is the enviroment of an object.
+2.1 **context** is the enviroment of an object.
 context refers to the object to which a function belongs.
 
 > Every bit of your JavaScript program is executed in one **execution context** or another.
@@ -43,7 +43,7 @@ its local scope to the scope chain it was defined within
 
 > Execution Context includes "your code","this","global object","other enviroment".
 
-* ### Scope is a rule that pertains to the visibility of variables,like a boundery.
+2.2 **Scope** is a rule that pertains to the visibility of variables,like a boundery.
 
 
 
