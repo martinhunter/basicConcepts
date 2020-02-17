@@ -28,16 +28,22 @@ Object { name: "Mar", op: op(), create: "bil" }
 
 ## constructor
 
-## scope/context
-* scope/context is distinguished by function rather than block
+## scope context
+### 1. scope is distinguished by function rather than block
+
+### 2. the difference between scope and context
+
+* **context** is the enviroment of an object.
+context refers to the object to which a function belongs.
 
 > Every bit of your JavaScript program is executed in one **execution context** or another.
 
 > evaluating a function establishes a distinct execution context that appends 
 its local scope to the scope chain it was defined within
 
-* #### context is all the codes in a function
-* #### scope is what the variables in the function refer to
+> Execution Context includes "your code","this","global object","other enviroment".
+
+* ### Scope is a rule that pertains to the visibility of variables,like a boundery.
 
 
 
