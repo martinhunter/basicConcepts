@@ -78,16 +78,7 @@ var thisobj = this_thought.ask_question();
 
 ### 2.2 when *this* points to window
 
-``` javascript
-function myFun() {
-    return this; // What is `this` here?
-}
-var obj = {
-    myMethod: function () {
-        eval("myFun()");
-    }
-};
-```
+
 
 * **Function Call**,not method of an object
 
@@ -129,7 +120,23 @@ window.onload = addhandler;
 <button id=’thebutton’>Click me!</button>
 ```
 
-### 3. solution for the misleading "this"
+### 3. how *this* is set: EVAL establishes new Execution Context
+When evaluating the eval code, this is obj. 
+However, in the eval code, myFun is not called on an object, 
+so ThisBinding is set to window for the call.
+
+``` javascript
+function myFun() {
+    return this; // What is `this` here?
+}
+var obj = {
+    myMethod: function () {
+        eval("myFun()");
+    }
+};
+```
+
+### 4. solution for the misleading "this"
 step1. apply(),call(),but they'll execute immediately,not suitble for handler
 step2. craete bind property to prorotype of function
 
@@ -147,8 +154,10 @@ function multiply(mult) {
 }
 btn.click = multiply.bind(handlerobject)(paramsforhandlerobject)；
 ```
+[this keyword](https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work)
 
 [Establishing an Execution Context](https://ecma-international.org/ecma-262/5.1/#sec-10.4）
+
 [undestanding scope](http://www.digital-web.com/articles/scope_in_javascript/)
 
 ## prototype
