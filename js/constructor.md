@@ -1,13 +1,14 @@
+https://cloud.google.com/translate/docs/basic/translating-text#translate_translate_text-python
+
 ## new
 
-1. what new does
+#### 1. what new does
 
 When the code new Foo(...) is executed, the following things happen:
 
     1. A new object is created, inheriting from Foo.prototype.
     2. The constructor function Foo is called with the specified arguments, and with this bound to the newly created object. new Foo is equivalent to new Foo(), i.e. if no argument list is specified, Foo is called without arguments.
     3. The object (not null, false, 3.1415 or other primitive types) returned by the constructor function becomes the result of the whole new expression. If the constructor function doesn't explicitly return an object, the object created in step 1 is used instead. (Normally constructors don't return a value, but they can choose to do so if they want to override the normal object creation process.)
-
 
 ``` javascript
 function User(){
@@ -16,7 +17,7 @@ function User(){
   // this = new Obj();??  //this is an instance of Obj(meta object),set properties of this below
   this.name = 'Mar';
   this.op = function(arg){
-    this.create = arg;
+    this.create = arg; // only when nobj.op() runs,this.create is called on nobj and the create property is assigned
     };
   // return this; // now nuser points to this
   };
@@ -26,15 +27,47 @@ var nuser = new User();
 
 ``` javascript
 Example when it runs
->> a
+>> nuser
 Object { name: "Mar", op: op() }
->> a.op('bil')
+>> nuser.op('bil')
 undefined (cause it returns no value)
->> a
+>> nuser
 Object { name: "Mar", op: op(), create: "bil" }
->> a.create
+>> nuser.create
 "bil"
 ```
+
+#### 2. how to inherit
+
+2.1 by prototype
+
+KeyCode: SonFunc.prototype = [instanceObject = ]new ParentFunc(parsOfParent);
+
+if property is not found in an object, it will try to find it in object.prototype
+
+``` javascript
+>> function User(age){this.age = age;}
+>> var u1 = new User(12);
+>> u1
+User {age: "12"}
+>> function client(par){this.hair = par;}
+undefined
+>> client.prototype = u1;
+User {age: "12"}
+>> var c1 = new client('black');
+c1.age;
+"12"
+>> c1
+>client {hair: "black"}
+   hair: "black"
+  >__proto__: User
+     age: "12"
+    >__proto__:
+      >constructor: ƒ User()
+      >__proto__: Object
+```
+
+
 
 
 ### 5. refrence link
