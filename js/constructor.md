@@ -7,8 +7,13 @@ https://cloud.google.com/translate/docs/basic/translating-text#translate_transla
 When the code new Foo(...) is executed, the following things happen:
 
     1. A new object is created, inheriting from Foo.prototype.
-    2. The constructor function Foo is called with the specified arguments, and with this bound to the newly created object. new Foo is equivalent to new Foo(), i.e. if no argument list is specified, Foo is called without arguments.
-    3. The object (not null, false, 3.1415 or other primitive types) returned by the constructor function becomes the result of the whole new expression. If the constructor function doesn't explicitly return an object, the object created in step 1 is used instead. (Normally constructors don't return a value, but they can choose to do so if they want to override the normal object creation process.)
+    2. The constructor function Foo is called with the specified arguments, and with this bound to the newly created object. 
+    new Foo is equivalent to new Foo(), i.e. if no argument list is specified, Foo is called without arguments.
+    3. The object (not null, false, 3.1415 or other primitive types) returned by the constructor function 
+    becomes the result of the whole new expression. 
+    If the constructor function doesn't explicitly return an object, the object created in step 1 is used instead. 
+    (Normally constructors don't return a value, 
+    but they can choose to do so if they want to override the normal object creation process.)
 
 ``` javascript
 function User(){
@@ -17,7 +22,8 @@ function User(){
   // this = new Obj();??  //this is an instance of Obj(meta object),set properties of this below
   this.name = 'Mar';
   this.op = function(arg){
-    this.create = arg; // only when nobj.op() runs,this.create is called on nobj and the create property is assigned
+    this.create = arg; // only when nobj.op() runs,
+                       // this.create is called on nobj and the create property is assigned
     };
   // return this; // now nuser points to this
   };
@@ -70,12 +76,17 @@ c1.age;
 
 
 
-### 5. refrence link
+#### 3. refrence link
 
 * [new operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
 
 
 ## constructor
+#### 1. concept/purpose
+
+This technique is usually used to initialize public instance variables.
+
+The constructor's this variable is used to add members to the object.
 
 ## scope context
 ### 1. scope is distinguished by function rather than block
@@ -119,9 +130,8 @@ var the_meaning = deep_thought.ask_question();
 ```
 
 * **Constructor** 
-#### 1. concept/purpose
 
-This technique is usually used to initialize public instance variables. The constructor's this variable is used to add members to the object.
+
 
 ``` javascript
 function BigComputer(answer) {
