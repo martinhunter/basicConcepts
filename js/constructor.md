@@ -45,7 +45,7 @@ Object { name: "Mar", op: op(), create: "bil" }
 
 #### 2. how to inherit
 
-2.1 by prototype
+2.1 prototypal inheritance
 
 KeyCode: SonFunc.prototype = [instanceObject = ]new ParentFunc(parsOfParent);
 
@@ -73,6 +73,7 @@ c1.age;
       >__proto__: Object
 ```
 
+2.2 class inheritance
 
 
 
