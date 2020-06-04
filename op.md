@@ -1,4 +1,4 @@
-，例如[operator>>,operator<<](#>>and<<)，左侧为iostream对象
+，例如[operator>>,operator<<](#and-)，左侧为iostream对象
 - 两者皆可：建议设为方法，方法可是virtual，而友元函数不能
 
 参考重载运算符表：Pg.355
